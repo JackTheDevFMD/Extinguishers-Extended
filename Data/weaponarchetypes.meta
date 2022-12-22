@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>W_AM_Fire_Exting2</modelName>
+			<txdName>W_AM_Fire_Exting2</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

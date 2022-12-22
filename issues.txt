@@ -1,1 +1,2 @@
-1. When trying to pick up the foam extinguisher, the extra (2) doesn't turn off after picking it up. This does work for water though.
+1. The extinguisher stands spawn above where they are supposed to be when servers starts, but a restart of the script fixes it?
+2. weapon_fireextinguisher2 does not spawn in players hand.

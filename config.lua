@@ -1,5 +1,6 @@
 config = {}
 
+-- Model name of the extinguishers
 config.extinguisherName = "Extinguishers"
 
 config.locations = {

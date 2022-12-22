@@ -2,11 +2,7 @@ local spawnedExtinguishers = {}
 local IsCarrying = false
 local currentExtinguisher = ""
 
-AddEventHandler("onResourceStart", function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then 
-        return
-    end 
-
+function loadExtinguishers()
     local extinguisherModel = config.extinguisherName
 
     for i,v in pairs(config.locations) do 
@@ -20,14 +16,17 @@ AddEventHandler("onResourceStart", function(resourceName)
 
         FreezeEntityPosition(spawnedExtinguisher, true)
         SetEntityInvincible(spawnedExtinguisher, true)
+        SetVehicleAutoRepairDisabled(spawnedExtinguisher, true)
 
-        SetVehicleExtra(spawnedExtinguisher, 1, 0)
-        SetVehicleExtra(spawnedExtinguisher, 2, 0)
+        if DoesExtraExist(spawnedExtinguisher, 1) and DoesExtraExist(spawnedExtinguisher, 2) then 
+            SetVehicleExtra(spawnedExtinguisher, 1, 0)
+            SetVehicleExtra(spawnedExtinguisher, 2, 0)
+        end
 
         table.insert(spawnedExtinguishers, spawnedExtinguisher)
 
     end
-end)
+end
 
 RegisterCommand("delex", function()
     for i,v in pairs(spawnedExtinguishers) do 
@@ -36,13 +35,16 @@ RegisterCommand("delex", function()
 end)
 
 
-
 function extinguisherPickup(extinguisherSet, extra)
-    IsCarrying = true
     currentExtinguisher = config.types[extra]
-
-    GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"), 9999, false, true)
+    IsCarrying = true
+    
     SetVehicleExtra(extinguisherSet, extra, 1)
+    if extra == 1 then 
+        GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"), 9999, false, true)
+    else
+        GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"), 9999, false, true)
+    end
 end
 
 
@@ -57,12 +59,16 @@ function extinguisherReplace(extinguisherSet, type)
     end
 
     RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"))
+    RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"))
     SetVehicleExtra(extinguisherSet, extra, 0)
 end
 
 
 
 Citizen.CreateThread(function()
+
+    loadExtinguishers()
+
     while true do
         Citizen.Wait(1)
 
@@ -92,7 +98,7 @@ Citizen.CreateThread(function()
                     if IsControlJustReleased(0, 38) then
                         extinguisherPickup(v, 1)
                     elseif IsControlJustReleased(0, 49) then 
-                        extinguisherPickup(V, 2)
+                        extinguisherPickup(v, 2)
                     end
                 end
             end
