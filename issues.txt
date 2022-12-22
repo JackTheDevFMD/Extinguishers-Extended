@@ -1,0 +1,1 @@
+1. When trying to pick up the foam extinguisher, the extra (2) doesn't turn off after picking it up. This does work for water though.
