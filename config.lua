@@ -2,6 +2,11 @@ config = {}
 
 -- Model name of the extinguishers
 config.extinguisherName = "Extinguishers"
+config.types = {
+    "Water",
+    "Foam"
+}
+config.playAnimation = true
 
 config.locations = {
     -- Mission Row PD
@@ -44,9 +49,4 @@ config.locations = {
 
     -- El Burro Heights FD
     vector4(1207.94, -1471.23, 34.86, 92.36)
-}
-
-config.types = {
-    "Water",
-    "Foam"
 }

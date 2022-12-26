@@ -28,22 +28,25 @@ function loadExtinguishers()
     end
 end
 
-RegisterCommand("delex", function()
-    for i,v in pairs(spawnedExtinguishers) do 
-        DeleteVehicle(v)
-    end
-end)
-
 
 function extinguisherPickup(extinguisherSet, extra)
     currentExtinguisher = config.types[extra]
     IsCarrying = true
+
+    if config.playAnimation then 
+
+        local dict = "anim@heists@narcotics@trash"
+        loadAnimDict(dict)
+        TaskPlayAnim(GetPlayerPed(-1), dict, 'pickup', 8.0, 1.0, -1, 48, 1)
+
+        Wait(2000)
     
-    SetVehicleExtra(extinguisherSet, extra, 1)
-    if extra == 1 then 
-        GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"), 9999, false, true)
-    else
-        GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"), 9999, false, true)
+        SetVehicleExtra(extinguisherSet, extra, 1)
+        if extra == 1 then 
+            GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"), 9999, false, true)
+        else
+            GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"), 9999, false, true)
+        end
     end
 end
 
@@ -58,9 +61,26 @@ function extinguisherReplace(extinguisherSet, type)
         end
     end
 
-    RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"))
-    RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"))
-    SetVehicleExtra(extinguisherSet, extra, 0)
+    if config.playAnimation then
+        
+        RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"))
+        RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"))
+
+        local dict = "anim@heists@narcotics@trash"
+        loadAnimDict(dict)
+        TaskPlayAnim(GetPlayerPed(-1), dict, 'pickup', 8.0, 1.0, -1, 48, 1)
+
+        Wait(2000)
+
+        SetVehicleExtra(extinguisherSet, extra, 0)
+    end
+end
+
+function loadAnimDict(dict)
+	RequestAnimDict(dict)
+	while not HasAnimDictLoaded(dict) do
+		Citizen.Wait(1)
+	end
 end
 
 

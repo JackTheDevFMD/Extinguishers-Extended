@@ -10,6 +10,10 @@ client_scripts {
     'config.lua'
 }
 
+server_scripts {
+    "Server/server.lua"
+}
+
 data_file 'VEHICLE_METADATA_FILE' 'Data/vehicles.meta'
 data_file 'CARCOLS_FILE' 'Data/carcols.meta'
 data_file 'VEHICLE_VARIATION_FILE' 'Data/carvariations.meta'
