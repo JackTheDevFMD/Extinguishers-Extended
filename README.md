@@ -12,8 +12,6 @@ Welcome to Extinguishers Extended by JackTheDev
 # Commands
 /delex - Deletes all extinguisher sets in the script. Use then before restarting the script otherwise it will crash the client.
 
-<video src='https://cdn.discordapp.com/attachments/800882036524711956/1055802689994375208/2022-12-23_11-02-11.mp4' width=1920>
-
 
 # Contact
 
