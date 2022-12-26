@@ -17,6 +17,13 @@ Welcome to Extinguishers Extended by JackTheDev
 [Youtube Video](https://www.youtube.com/watch?v=teTHzzQBp5E&feature=youtu.be)
 
 
+# Credits
+
+| Person | Item |
+| ------ | ---- |
+| Steve6645 | Fire Extinguisher Model + Texture
+| GeorgieMoon | Screw Texture |
+
 # Contact
 
 Should you wish to contact me about the script for any reason...
