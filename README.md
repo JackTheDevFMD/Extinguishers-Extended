@@ -17,7 +17,7 @@ Welcome to Extinguishers Extended by JackTheDev
 
 Should you wish to contact me about the script for any reason...
 
-- Discord - [discord.gg/fmd](discord.gg/fmd) | JackTheDev#3347
+- Discord - [discord.gg/fmd](https://discord.gg/fmd) | JackTheDev#3347
 - Email - jackthedev@freemodedesigns.shop
 - Website - [https://freemodedesigns.shop](https://freemodedesigns.shop)
 
