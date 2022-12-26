@@ -5,7 +5,7 @@ Welcome to Extinguishers Extended by JackTheDev
 # Issues
 
 1. [ExExtinguishers Set Spawning](https://github.com/JackTheDevFMD/Extinguishers-Extended/issues/2)
-2. [Chrome Fire Extinguisher] (https://github.com/JackTheDevFMD/Extinguishers-Extended/issues/1)
+2. [Chrome Fire Extinguisher](https://github.com/JackTheDevFMD/Extinguishers-Extended/issues/1)
 
 ## Please contact me if you know how to fix the issues above or make a PR!
 
@@ -17,8 +17,8 @@ Welcome to Extinguishers Extended by JackTheDev
 
 Should you wish to contact me about the script for any reason...
 
-Discord - [discord.gg/fmd](discord.gg/fmd) | JackTheDev#3347
-Email - jackthedev@freemodedesigns.shop
-Website - [https://freemodedesigns.shop](https://freemodedesigns.shop)
+- Discord - [discord.gg/fmd](discord.gg/fmd) | JackTheDev#3347
+- Email - jackthedev@freemodedesigns.shop
+- Website - [https://freemodedesigns.shop](https://freemodedesigns.shop)
 
 
