@@ -12,6 +12,10 @@ Welcome to Extinguishers Extended by JackTheDev
 # Commands
 /delex - Deletes all extinguisher sets in the script. Use then before restarting the script otherwise it will crash the client.
 
+# Preview
+
+[Youtube Video](https://www.youtube.com/watch?v=teTHzzQBp5E&feature=youtu.be)
+
 
 # Contact
 
