@@ -53,6 +53,13 @@ function extinguisherPickup(extinguisherSet, extra)
         else
             GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"), 9999, false, true)
         end
+    else 
+        SetVehicleExtra(extinguisherSet, extra, 1)
+        if extra == 1 then 
+            GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"), 9999, false, true)
+        else
+            GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"), 9999, false, true)
+        end
     end
 end
 
@@ -79,6 +86,12 @@ function extinguisherReplace(extinguisherSet, type)
         Wait(2000)
 
         SetVehicleExtra(extinguisherSet, extra, 0)
+    else 
+        RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher"))
+        RemoveWeaponFromPed(GetPlayerPed(-1), GetHashKey("weapon_fireextinguisher2"))
+
+        SetVehicleExtra(extinguisherSet, extra, 0)
+
     end
 end
 
