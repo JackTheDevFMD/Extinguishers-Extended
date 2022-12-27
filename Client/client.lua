@@ -28,6 +28,12 @@ function loadExtinguishers()
     end
 end
 
+RegisterCommand("delex", function()
+    for i,v in pairs(spawnedExtinguishers) do 
+        DeleteVehicle(v)
+    end
+end, false)
+
 
 function extinguisherPickup(extinguisherSet, extra)
     currentExtinguisher = config.types[extra]

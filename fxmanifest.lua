@@ -2,16 +2,18 @@ fx_version 'cerulean'
 games { 'gta5' }
 
 files {
-	'Data/*.meta'
+    'Data/weaponarchetypes.meta',
+    'Data/weaponanimations.meta',
+    'Data/pedpersonality.meta',
+    'Data/weapons.meta',
+    'Data/vehicles.meta',
+    'Data/carcols.meta',
+    'Data/carvariations.meta',
 }
 
 client_scripts {
     'Client/client.lua',
     'config.lua'
-}
-
-server_scripts {
-    "Server/server.lua"
 }
 
 data_file 'VEHICLE_METADATA_FILE' 'Data/vehicles.meta'
